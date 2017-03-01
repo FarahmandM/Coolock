@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <title>Coolock</title>
-<!--<script type="text/javascript" src="http://rawgithub.com/CivilForYou/Coolock/master/coolock.js"></script>-->
+<!--<script type="text/javascript" src="http://rawgithub.com/FarahmandM/Coolock/master/coolock.js"></script>-->
 <script type="text/javascript" src="coolock.js"></script>
 </head>
 <body>
 <div id="coolockWrapper"></div>
 <script type="text/javascript">
-new Coolock(180, 180);
+var myCoolock = new Coolock();
+var anotherCoolock = new Coolock({size: 500, canvasId: 'anotherCoolock', strokeColor: 'brown'});
+var anotherCoolock = new Coolock({size: 450, canvasId: 'anotherCoolock', fillColor: '#000', strokeColor: '#fff'});
 </script>
 </body> 
 </html>
