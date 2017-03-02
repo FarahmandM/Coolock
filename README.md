@@ -42,6 +42,7 @@ new Coolock(o);
 </script>
 ...
 ```
+[Live exmaples](https://farahmandm.github.io/Coolock/)
 
 ## Author
 
