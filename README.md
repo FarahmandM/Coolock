@@ -3,7 +3,7 @@ Coolock
 
 A cool clock with pure JavaScript and HTML5.
 
-![Coolock - A Cool Clock](https://farahmandm.github.io/Coolock/coolock.png)	
+![Coolock - A Cool Clock](coolock.png)	
 
 ## Usage
 
