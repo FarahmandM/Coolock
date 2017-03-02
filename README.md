@@ -7,6 +7,13 @@ A cool clock with pure JavaScript and HTML5.
 
 ## Usage
 
+Create a `div` element which has an `id` attribute like so:
+```html
+<div id="coolockWrapper"></div>
+```
+
+Then place the code below after the `div`:
+
 ```javascript
 new Coolock(options);
 ```

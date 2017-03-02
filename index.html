@@ -1,12 +1,154 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Coolock</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-<h1>Coolock</h1>
-<a href="./example.html">Example</a>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Coolock, cool javascipt/html5 clock examples.">
+    <meta name="author" content="Farahmand Moslemi">
+    <title>Coolock - A Cool Clock</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--<script type="text/javascript" src="http://rawgithub.com/FarahmandM/Coolock/master/coolock.js"></script>-->
+    <script type="text/javascript" src="coolock.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://farahmandm.github.io/Coolock/">Coolock</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <div class="jumbotron">
+        <h1>Coolock</h1>
+        <p>A cool clock with pure JavaScript and HTML5 (<a href="https://github.com/FarahmandM/Coolock" target="_blank">Github Repo</a>).</p>
+        <p><img src="coolock.png" class="img-thumbnail" alt="Coolock"></p>
+      </div>
+
+      <div class="page-header">
+        <h2>Usage</h2>
+      </div>
+      <p>Create a <code>div</code> element which has an <code>id</code> attribute like so:</p>
+      <pre><code><xmp><div id="coolockWrapper"></div></xmp></code></pre>
+      <p>Then place the code below after the <code>div</code>:</p>
+      <pre><code>new Coolock(options);</code></pre>
+      <p>where <code>options</code> is an object containing these properties:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Default Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>size</code></td>
+            <td><em>Number</em></td>
+            <td>The size of canvas.</td>
+            <td><code>400</code></td>
+          </tr>
+          <tr>
+            <td><code>strokeColor</code></td>
+            <td><em>String</em></td>
+            <td>The html color of strokes like <code>red</code> and <code>#f00</code>.</td>
+            <td><code>#000</code></td>
+          </tr>
+          <tr>
+            <td><code>fillColor</code></td>
+            <td><em>String</em></td>
+            <td>The filling color like <code>blue</code> and <code>#00f</code></td>
+            <td><code>#fff</code></td>
+          </tr>
+          <tr>
+            <td><code>lineCap</code></td>
+            <td><em>String</em></td>
+            <td>The type of line cap could be <code>butt</code>, <code>round</code> or <code>square</code>.</td>
+            <td><code>round</code></td>
+          </tr>
+          <tr>
+            <td><code>canvasId</code></td>
+            <td><em>String</em></td>
+            <td>The id of canvas.</td>
+            <td><code>coolock</code></td>
+          </tr>
+          <tr>
+            <td><code>canvasWrapperId</code></td>
+            <td><em>String</em></td>
+            <td>The id of html element that Coolock canvas should be rendered there.</td>
+            <td><code>coolockWrapper</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-header">
+        <h2>Examples</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">
+          <div id="coolock1"></div>
+        </div>
+        <div class="col-md-10 col-sm-8 col-xs-12">
+          <pre><code>var myCoolock = new Coolock({size: 50});</code></pre>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">
+          <div id="coolock2"></div>
+        </div>
+        <div class="col-md-10 col-sm-8 col-xs-12">
+          <pre><code>var anotherCoolock = new Coolock({size: 150, canvasId: 'anotherCoolock', strokeColor: '#00a'});</code></pre>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-12">
+          <div id="coolock3"></div>
+        </div>
+        <div class="col-md-10 col-sm-8 col-xs-12">
+          <pre><code>var o = {size: 100, lineCap: 'butt', canvasId: 'anotherCoolock', fillColor: 'black', strokeColor: '#fff'};
+new Coolock(o);</code></pre>
+        </div>
+      </div>
+      <script type="text/javascript">
+       var myCoolock = new Coolock({size: 50,canvasWrapperId: 'coolock1'});
+       var anotherCoolock = new Coolock({size: 150, canvasId: 'anotherCoolock', strokeColor: '#00a', canvasWrapperId: 'coolock2'});
+       var o = {size: 100, lineCap: 'butt', canvasId: 'anotherCoolock', fillColor: 'black', strokeColor: '#fff', canvasWrapperId: 'coolock3'};
+       new Coolock(o);
+      </script>
+      
+      <div class="page-header">
+        <h2>Author</h2>
+      </div>
+      <p>Farahmand Moslemi</p>
+      
+      <div class="page-header">
+        <h2>License</h2>
+      </div>
+      <p>GNU GPL2</p>
+
+    </div>
+
+    <footer style="background-color:#000; margin-top:40px; padding:10px 0;">
+      <div class="container">
+        <p class="text-muted" style="text-align:center;">&copy; Copyright 2014-2017 - Farahmand Moslemi</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
 </html>
