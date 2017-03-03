@@ -7,8 +7,8 @@
     <meta name="description" content="Coolock, cool javascipt/html5 clock examples.">
     <meta name="author" content="Farahmand Moslemi">
     <title>Coolock - A Cool Clock</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -23,7 +23,19 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="https://farahmandm.github.io/Coolock/">Coolock</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://farahmandm.github.io/">Farahmand Moslemi</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="https://farahmandm.github.io/">Home</a></li>
+            <li class="active"><a href="https://farahmandm.github.io/Coolock/">Coolock</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -32,7 +44,7 @@
 
       <div class="jumbotron">
         <h1>Coolock</h1>
-        <p>A cool clock with pure JavaScript and HTML5 (<a href="https://github.com/FarahmandM/Coolock" target="_blank">Github Repo</a>).</p>
+        <p>A cool clock with pure JavaScript and HTML5 (<a href="https://github.com/FarahmandM/Coolock" target="_blank">GitHub Repo</a>).</p>
         <p><img src="coolock.png" class="img-thumbnail" alt="Coolock"></p>
       </div>
 
@@ -144,7 +156,7 @@ new Coolock(o);</code></pre>
 
     <footer style="background-color:#000; margin-top:40px; padding:10px 0;">
       <div class="container">
-        <p class="text-muted" style="text-align:center;">&copy; Copyright 2014-2017 - Farahmand Moslemi</p>
+        <p class="text-muted" style="text-align:center;">&copy; 2017 Farahmand Moslemi</p>
       </div>
     </footer>
 
