@@ -17,8 +17,13 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-/* 
- * Coolock Class Definition
+/**
+ * JavaScript Strict Mode
+ */
+'use strict';
+
+/**
+ * Coolock Definition
  */
 function Coolock(options) {
 	var defaultOptions = {size: 400, canvasId: 'coolock', canvasWrapperId: 'coolockWrapper', strokeColor: '#000', fillColor: '#fff', lineCap: 'round'}
@@ -60,11 +65,11 @@ function Coolock(options) {
 		
 		this.drawCircle(this.size / 2, this.size / 2, 0.42 * this.size, 0.08 * this.size, true, true);
 
-		for(i = 0; i < 60; i++) {
+		for(var i = 0; i < 60; i++) {
 			this.drawCircle(this.size / 2 + 0.36 * this.size * Math.cos(6 * i * Math.PI / 180), this.size / 2 + 0.36 * this.size * Math.sin(6 * i * Math.PI / 180), 0.006 * this.size, 0.006 * this.size, true);
 		}
 		
-		for(i = 0; i < 60; i+= 5) {
+		for(var i = 0; i < 60; i+= 5) {
 			this.drawCircle(this.size / 2 + 0.36 * this.size * Math.cos(6 * i * Math.PI / 180), this.size / 2 + 0.36 * this.size * Math.sin(6 * i * Math.PI / 180), 0.01 * this.size, 0.01 * this.size, true);
 		}
 	}
@@ -72,10 +77,10 @@ function Coolock(options) {
 	this.redraw = function() {
 		var ctx = this.ctx;
 
-		d = new Date();
-		h = d.getHours();
-		m = d.getMinutes();
-		s = d.getSeconds();
+		var d = new Date(),
+        h = d.getHours(),
+        m = d.getMinutes(),
+        s = d.getSeconds();
 	
 		this.drawCircle(this.size / 2, this.size / 2, 0.333 * this.size, 0.01 * this.size, false, true);
 		this.drawLine(this.size / 2 + 0.19 * this.size * Math.cos(30 * (h + m / 60 + s / 3600) * Math.PI / 180 - Math.PI / 2), this.size / 2 + 0.19 * this.size * Math.sin(30 * (h + m / 60 + s / 3600) * Math.PI / 180 - Math.PI / 2), this.size / 2, this.size / 2, 0.04 * this.size)
