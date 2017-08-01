@@ -18,6 +18,8 @@
     <script type="text/javascript" src="coolock.js"></script>
     <style>
       xmp {margin:0;}
+      .table > tbody > tr > td {vertical-align: middle;}
+      .table > thead > tr > th {font-size: 120%; text-align: center;}
     </style>
   </head>
 
@@ -58,7 +60,7 @@
       </div>
     </nav>
 
-    <div class="container theme-showcase" role="main">
+    <div class="container theme-showcase table-responsive" role="main">
 
       <div class="jumbotron">
         <h1>Coolock</h1>
@@ -74,7 +76,7 @@
       <p>Then place the code below after the <code>div</code>:</p>
       <pre><code>new Coolock(options);</code></pre>
       <p>where <code>options</code> is an object containing these properties:</p>
-      <table class="table">
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th>Property</th>
